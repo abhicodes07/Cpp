@@ -43,14 +43,17 @@ public:
   
   void info(){
     // function to display information
-    std::cout << "RNO\tNAME\tPER\tCOURSE\tENG\tMAT\tSCI\t" << endl;
     std::cout << rno << "\t" << name << "\t" << per << "\t" << course << "\t" << a << "\t" << b << "\t" << c << "\t" << endl;   
   }
 };
 
 // main 
 int main() {
-  Marks s1;
-  s1.info();
+  int num_student = 5;
+  Marks s1[num_student];
+  std::cout << "RNO\tNAME\tPER\tCOURSE\tENG\tMAT\tSCI\t" << endl;
+  for (int i = 0; i < num_student; i++) {
+    s1[i].info();
+  }
   return 0;
 }
